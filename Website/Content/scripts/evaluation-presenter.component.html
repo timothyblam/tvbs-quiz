@@ -1,0 +1,22 @@
+﻿<div class="body-container container-fluid body-presenter" style="display: table; height: 100%;">
+	<div style="display: table-cell; vertical-align: middle;">
+		<button ng-click="vm.startNextQuestion()" ng-show="vm.getState() === 'players'" class="btn btn-{{ vm.color }} btn-lg">
+			<span class="glyphicon glyphicon-arrow-right"></span>
+		</button>
+
+		<button ng-click="vm.showResults()" ng-show="vm.getState() === 'question'" class="btn btn-{{ vm.color }} btn-lg">
+			<span class="glyphicon glyphicon-eye-open"></span>
+		</button>
+	</div>
+	<div class="reset">
+		<button ng-click="vm.reset(1)" class="btn btn-yellow btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
+		<button ng-click="vm.reset(2)" class="btn btn-orange btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
+		<button ng-click="vm.reset(3)" class="btn btn-red btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
+		<button ng-click="vm.reset(4)" class="btn btn-black btn-xs"><span class="glyphicon glyphicon-remove"></span></button>
+	</div>
+</div>
+
+<div ng-switch="vm.getIsWebSocketOpen()" class="footer">
+	<span ng-switch-when="true" class="glyphicon glyphicon-heart"></span>
+	<span ng-switch-when="false" class="glyphicon glyphicon-heart-empty"></span>
+</div>

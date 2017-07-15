@@ -1,0 +1,424 @@
+﻿
+{
+	"color": "yellow",
+	"players": [
+		{
+			"isActive": true,
+			"code": "0342",
+			"name": "01",
+			"points": 0,
+			"totalPoints": 3400
+		},
+		{
+			"isActive": true,
+			"code": "0447",
+			"name": "02",
+			"points": 0,
+			"totalPoints": 3000
+		},
+		{
+			"isActive": true,
+			"code": "0473",
+			"name": "03",
+			"points": 0,
+			"totalPoints": 3600
+		},
+		{
+			"isActive": true,
+			"code": "1528",
+			"name": "04",
+			"points": 0,
+			"totalPoints": 2900
+		},
+		{
+			"isActive": true,
+			"code": "1613",
+			"name": "05",
+			"points": 0,
+			"totalPoints": 3100
+		},
+		{
+			"isActive": true,
+			"code": "2244",
+			"name": "06",
+			"points": 0,
+			"totalPoints": 3500
+		},
+		{
+			"isActive": true,
+			"code": "2682",
+			"name": "07",
+			"points": 0,
+			"totalPoints": 3100
+		},
+		{
+			"isActive": true,
+			"code": "4021",
+			"name": "08",
+			"points": 0,
+			"totalPoints": 3400
+		},
+		{
+			"isActive": true,
+			"code": "4512",
+			"name": "09",
+			"points": 0,
+			"totalPoints": 3800
+		},
+		{
+			"isActive": true,
+			"code": "4932",
+			"name": "10",
+			"points": 0,
+			"totalPoints": 2600
+		},
+		{
+			"isActive": true,
+			"code": "6717",
+			"name": "11",
+			"points": 0,
+			"totalPoints": 3300
+		},
+		{
+			"isActive": true,
+			"code": "7036",
+			"name": "12",
+			"points": 0,
+			"totalPoints": 3100
+		},
+		{
+			"isActive": true,
+			"code": "7599",
+			"name": "13",
+			"points": 0,
+			"totalPoints": 2900
+		},
+		{
+			"isActive": true,
+			"code": "8103",
+			"name": "14",
+			"points": 0,
+			"totalPoints": 3400
+		},
+		{
+			"isActive": true,
+			"code": "8707",
+			"name": "15",
+			"points": 0,
+			"totalPoints": 3000
+		},
+		{
+			"isActive": true,
+			"code": "8939",
+			"name": "16",
+			"points": 0,
+			"totalPoints": 3100
+		},
+		{
+			"isActive": true,
+			"code": "8958",
+			"name": "17",
+			"points": 0,
+			"totalPoints": 3200
+		},
+		{
+			"isActive": false,
+			"code": "9153",
+			"name": "18",
+			"points": 0,
+			"totalPoints": 0
+		},
+		{
+			"isActive": false,
+			"code": "9650",
+			"name": "19",
+			"points": 0,
+			"totalPoints": 0
+		},
+		{
+			"isActive": false,
+			"code": "9881",
+			"name": "20",
+			"points": 0,
+			"totalPoints": 0
+		}
+	],
+	"questions": [
+		{
+			"options": [
+				{
+					"isCorrect": false,
+					"letter": "A",
+					"text": "To Go"
+				},
+				{
+					"isCorrect": false,
+					"letter": "B",
+					"text": "Listen In"
+				},
+				{
+					"isCorrect": false,
+					"letter": "C",
+					"text": "I Seek"
+				},
+				{
+					"isCorrect": true,
+					"letter": "D",
+					"text": "I Stand"
+				}
+			],
+			"text": "What was Thursday's theme song?"
+		},
+		{
+			"options": [
+				{
+					"isCorrect": false,
+					"letter": "A",
+					"text": "Straight"
+				},
+				{
+					"isCorrect": true,
+					"letter": "B",
+					"text": "Forgiveness"
+				},
+				{
+					"isCorrect": false,
+					"letter": "C",
+					"text": "Faith"
+				},
+				{
+					"isCorrect": false,
+					"letter": "D",
+					"text": "Judge"
+				}
+			],
+			"text": "What was Thursday's word of the day?"
+		},
+		{
+			"options": [
+				{
+					"isCorrect": false,
+					"letter": "A",
+					"text": "Huntington Elementary"
+				},
+				{
+					"isCorrect": true,
+					"letter": "B",
+					"text": "Mesa View"
+				},
+				{
+					"isCorrect": false,
+					"letter": "C",
+					"text": "Point View"
+				},
+				{
+					"isCorrect": false,
+					"letter": "D",
+					"text": "Stoneybrooke"
+				}
+			],
+			"text": "Where did Dean-o go to school?"
+		},
+		{
+			"options": [
+				{
+					"isCorrect": false,
+					"letter": "A",
+					"text": "$8,000"
+				},
+				{
+					"isCorrect": false,
+					"letter": "B",
+					"text": "$9,000"
+				},
+				{
+					"isCorrect": false,
+					"letter": "C",
+					"text": "$10,000"
+				},
+				{
+					"isCorrect": true,
+					"letter": "D",
+					"text": "$12,000"
+				}
+			],
+			"text": "How much money are we raising for Field of Dreams?"
+		},
+		{
+			"options": [
+				{
+					"isCorrect": false,
+					"letter": "A",
+					"text": "Listen In"
+				},
+				{
+					"isCorrect": false,
+					"letter": "B",
+					"text": "I Seek"
+				},
+				{
+					"isCorrect": false,
+					"letter": "C",
+					"text": "I Stand"
+				},
+				{
+					"isCorrect": true,
+					"letter": "D",
+					"text": "Alive in Me"
+				}
+			],
+			"text": "What is today's song of the day?"
+		},
+		{
+			"options": [
+				{
+					"isCorrect": false,
+					"letter": "A",
+					"text": "grow"
+				},
+				{
+					"isCorrect": false,
+					"letter": "B",
+					"text": "wish"
+				},
+				{
+					"isCorrect": false,
+					"letter": "C",
+					"text": "wash"
+				},
+				{
+					"isCorrect": true,
+					"letter": "D",
+					"text": "cleanse"
+				}
+			],
+			"text": "\"...having our hearts sprinkled to ___________ us from a guilty conscience...\""
+		},
+		{
+			"options": [
+				{
+					"isCorrect": false,
+					"letter": "A",
+					"text": "grace"
+				},
+				{
+					"isCorrect": false,
+					"letter": "B",
+					"text": "faith"
+				},
+				{
+					"isCorrect": true,
+					"letter": "C",
+					"text": "Christ"
+				},
+				{
+					"isCorrect": false,
+					"letter": "D",
+					"text": "God"
+				}
+			],
+			"text": "\"I have been crucified with Christ and I no longer live, but __________ lives in me.\""
+		},
+		{
+			"options": [
+				{
+					"isCorrect": false,
+					"letter": "A",
+					"text": "Indiana"
+				},
+				{
+					"isCorrect": true,
+					"letter": "B",
+					"text": "Henry"
+				},
+				{
+					"isCorrect": false,
+					"letter": "C",
+					"text": "John"
+				},
+				{
+					"isCorrect": false,
+					"letter": "D",
+					"text": "James"
+				}
+			],
+			"text": "What is Indiana Jones' first name?"
+		},
+		{
+			"options": [
+				{
+					"isCorrect": false,
+					"letter": "A",
+					"text": "Their clothes"
+				},
+				{
+					"isCorrect": false,
+					"letter": "B",
+					"text": "Their words"
+				},
+				{
+					"isCorrect": true,
+					"letter": "C",
+					"text": "Their fruit"
+				},
+				{
+					"isCorrect": false,
+					"letter": "D",
+					"text": "Their friends"
+				}
+			],
+			"text": "How can we recognize false prophets?"
+		},
+		{
+			"options": [
+				{
+					"isCorrect": false,
+					"letter": "A",
+					"text": "ETG PRIAT"
+				},
+				{
+					"isCorrect": false,
+					"letter": "B",
+					"text": "TEG ATUPR"
+				},
+				{
+					"isCorrect": false,
+					"letter": "C",
+					"text": "GTE TEPRA"
+				},
+				{
+					"isCorrect": true,
+					"letter": "D",
+					"text": "TGE TARPA"
+				}
+			],
+			"text": "Unscramble today's key phrase."
+		},
+		{
+			"options": [
+				{
+					"isCorrect": true,
+					"letter": "A",
+					"text": "Bible Application"
+				},
+				{
+					"isCorrect": true,
+					"letter": "B",
+					"text": "The one with Cierra & Tim"
+				},
+				{
+					"isCorrect": false,
+					"letter": "C",
+					"text": "The game show one"
+				},
+				{
+					"isCorrect": false,
+					"letter": "D",
+					"text": "The one in the Cavern"
+				}
+			],
+			"text": "What was the best breakout?"
+		}
+	],
+	"team": "Scouts"
+}

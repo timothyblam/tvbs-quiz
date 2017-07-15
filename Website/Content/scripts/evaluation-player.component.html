@@ -1,0 +1,101 @@
+﻿<div class="body-container container-fluid body-player">
+	<div ng-show="vm.getIsConnected()" class="log-off">
+		<button class="btn btn-xs btn-link" ng-click="vm.logOff()">Log Off</button>
+	</div>
+
+	<div ng-switch="vm.getIsWebSocketOpen()" class="heart">
+		<span ng-switch-when="true" class="glyphicon glyphicon-heart"></span>
+		<span ng-switch-when="false" class="glyphicon glyphicon-heart-empty"></span>
+	</div>
+
+	<div class="logo text-center">
+		<img src="/content/images/logo.png" />
+		<p ng-hide="vm.getName() === ''" class="{{ vm.color }}">Group {{ vm.getName() }}</p>
+	</div>
+
+	<div ng-switch="vm.getState()" style="height: 40%;">
+		<!-- State: Connect -->
+		<div ng-switch-when="connect" class="center-block connect">
+			<form>
+				<div class="form-group">
+					<label class="{{ vm.color }}">Code</label>
+					<input ng-model="vm.code" class="form-control input-lg" type="text" />
+				</div>
+
+				<div ng-show="vm.connectionAttempted && !vm.getIsConnecting()" class="text-bottom" style="margin-bottom: 50px;">
+					<p>Invalid code.</p>
+				</div>
+
+				<div class="button-bottom">
+					<button ng-click="vm.connect()" class="btn btn-{{ vm.color }} btn-lg">
+						<span class="glyphicon" ng-class="{ 'glyphicon-refresh glyphicon-refresh-animate': vm.getIsConnecting(), 'glyphicon-flash':!vm.getIsConnecting() }"></span>
+						<span>Connect</span>
+					</button>
+				</div>
+			</form>
+		</div>
+
+		<!-- State: Intro -->
+		<div ng-switch-when="intro" class="text-center" style="height: 100%;">
+			<div class="points">
+				<div>
+					<h1>{{ vm.getPoints() }}</h1>
+					<h3>Points</h3>
+				</div>
+			</div>
+			<div class="text-bottom">
+				<p>Waiting for the next question.</p>
+			</div>
+		</div>
+
+		<!-- State: Question -->
+		<div ng-switch-when="question" class="question">
+			<h3 class="text-center">
+				<span class="letter {{ vm.color }}">{{ vm.getQuestionNumber() }})</span>
+				{{ vm.getQuestion().text }}
+			</h3>
+			<div ng-repeat="option in vm.getQuestion().options" class="radio question-options">
+				<label ng-class="{ 'dimmed': (vm.getIsSubmitted() && vm.answer !== option.letter) }">
+					<input ng-model="vm.answer" name="options" type="radio" value="{{ option.letter }}">
+					<span class="{{ vm.color }}">{{ option.letter }})</span> {{ option.text }}
+				</label>
+			</div>
+
+			<div ng-show="vm.getIsSubmitted()" class="text-bottom">
+				<p>Waiting for other groups to answer.</p>
+			</div>
+
+			<div ng-hide="vm.getIsSubmitted()" class="button-bottom">
+				<button ng-click="vm.submitAnswer()" class="btn btn-{{ vm.color }} btn-lg">
+					<span class="glyphicon" ng-class="{ 'glyphicon-share': !vm.getIsSubmitting(), 'glyphicon-refresh glyphicon-refresh-animate': vm.getIsSubmitting() }"></span>
+					<span>Submit</span>
+				</button>
+			</div>
+		</div>
+
+
+		<!-- State: Result -->
+		<div ng-switch-when="result" class="text-center">
+			<div class="points">
+				<div>
+					<h1>{{ vm.getPoints() }}</h1>
+					<h3>Points</h3>
+
+					<div ng-switch="vm.getIsCorrect()">
+						<h1 ng-switch-when="true" class="text-success">Correct</h1>
+						<h1 ng-hide="vm.getAnswer() === null" ng-switch-when="false" class="text-danger">Incorrect</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- State: Final -->
+		<div ng-switch-when="final">
+
+		</div>
+	</div>
+</div>
+
+<div ng-switch="vm.getIsWebSocketOpen()" class="footer">
+
+</div>

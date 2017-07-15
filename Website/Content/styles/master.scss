@@ -1,0 +1,610 @@
+﻿$black: #333;
+$orange: #E25109;
+$red: #990000;
+$yellow: #FFDD00;
+
+$fedora: 'SF Fedora', Arial;
+
+@font-face
+{
+	font-family: 'SF Fedora';
+	src: url('/content/fonts/sf-fedora.woff');
+}
+
+a
+{
+	cursor: pointer;
+}
+
+body
+{
+	color: #FFF;
+	height: 100%;
+	text-shadow: 1px 1px 0px #000;
+}
+
+html, body
+{
+	background: #000;
+	height: 100%;
+	margin: 0px;
+	overflow: hidden;
+	padding: 0px;
+	width: 100%;
+}
+
+.black
+{
+	color: $black !important;
+}
+
+.orange
+{
+	color: $orange !important;
+}
+
+.red
+{
+	color: $red !important;
+}
+
+.yellow
+{
+	color: $yellow !important;
+}
+
+.btn-black
+{
+	background-color: $black;
+	background: linear-gradient(to bottom, $black 0%, darken($black, 5%) 75%) !important;
+	border-color: black !important;
+	color: white !important;
+
+	&:hover
+	{
+		background-color: $black !important;
+		background: linear-gradient(to bottom, $black 0%, $black 75%) !important;
+	}
+}
+
+.btn-orange
+{
+	background-color: $orange;
+	background: linear-gradient(to bottom, $orange 0%, darken($orange, 5%) 75%) !important;
+	border-color: black !important;
+	color: white !important;
+
+	&:hover
+	{
+		background-color: $orange !important;
+		background: linear-gradient(to bottom, $orange 0%, $orange 75%) !important;
+	}
+}
+
+.btn-red
+{
+	background-color: $red;
+	background: linear-gradient(to bottom, $red 0%, darken($red, 5%) 75%) !important;
+	border-color: black !important;
+	color: white !important;
+
+	&:hover
+	{
+		background-color: $red !important;
+		background: linear-gradient(to bottom, $red 0%, $red 75%) !important;
+	}
+}
+
+
+.btn-yellow
+{
+	background-color: $yellow;
+	background: linear-gradient(to bottom, $yellow 0%, darken($yellow, 5%) 75%) !important;
+	border-color: black !important;
+	color: black !important;
+
+	&:hover
+	{
+		background-color: $yellow !important;
+		background: linear-gradient(to bottom, $yellow 0%, $yellow 75%) !important;
+	}
+}
+
+div.body-container
+{
+	min-height: 100%;
+	padding-bottom: 20px;
+}
+
+div.body-owner
+{
+	padding-top: 15px;
+
+	> div.body
+	{
+		height: 80%;
+
+		> div.players
+		{
+			height: 100%;
+
+			> div.player
+			{
+				height: 25%;
+				padding: 15px;
+				width: 20%;
+
+				> div.player-container
+				{
+					background-color: rgba(16, 16, 16, 0.75);
+					border: 1px solid #333;
+					border-radius: 5px;
+					font-family: $fedora;
+					height: 100%;
+					overflow: hidden;
+					padding: 5px 10px;
+					position: relative;
+
+					> div.answer
+					{
+						text-align: center;
+
+						> h1
+						{
+							font-size: 60px;
+							margin: 0;
+							margin-top: 10px;
+						}
+
+						> h4
+						{
+							margin: 0;
+						}
+
+						> h5
+						{
+							margin: 0;
+						}
+					}
+
+					> div.connection-indicator
+					{
+						font-size: 10px;
+						position: absolute;
+						right: 5px;
+						top: 5px;
+					}
+
+					> h4
+					{
+						color: $orange;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		> div.question
+		{
+			font-family: $fedora;
+			margin-top: 25px;
+
+			> div.players-summary
+			{
+				bottom: 5px;
+				left: 0;
+				position: absolute;
+				width: 100%;
+
+				> div.player
+				{
+					box-sizing: border-box;
+					float: left;
+					height: 100px;
+					padding: 5px;
+					width: 5%;
+
+					> div.player-container
+					{
+						background-color: rgba(16, 16, 16, 0.75);
+						border: 1px solid #333;
+						border-radius: 5px;
+						height: 100%;
+						overflow: hidden;
+						padding: 5px 5px;
+						position: relative;
+
+						> div.answer
+						{
+							> h2
+							{
+								color: #999;
+								margin: 0;
+								margin-top: 15px;
+							}
+						}
+
+						> h4
+						{
+							color: $orange;
+							font-size: 16px;
+							font-weight: bold;
+							margin-top: 0;
+						}
+					}
+				}
+			}
+
+			> h1
+			{
+				font-size: 60px;
+				margin: 0;
+				text-align: center;
+			}
+
+			> ul
+			{
+				> li
+				{
+					display: inline-block;
+					font-size: 36px;
+					margin-top: 25px;
+					text-align: center;
+					vertical-align: top;
+					width: 50%;
+				}
+			}
+		}
+	}
+
+	> div.header
+	{
+		display: table;
+		height: 20%;
+		overflow: hidden;
+		position: relative;
+		width: 100%;
+
+		> div.logo
+		{
+			display: table-cell;
+			vertical-align: top;
+			width: 300px;
+		}
+
+		> div.question
+		{
+			display: table-cell;
+			font-family: $fedora;
+			font-size: 20px;
+			padding-left: 15px;
+			vertical-align: top;
+
+			> p
+			{
+				font-size: 24px;
+			}
+
+			> ul
+			{
+				padding-left: 30px;
+
+				> li
+				{
+					font-size: 16px;
+				}
+			}
+		}
+
+		> div.team
+		{
+			bottom: 0;
+			font-family: $fedora;
+			position: absolute;
+			right: 50px;
+		}
+	}
+}
+
+div.body-player
+{
+	height: 100%;
+	max-width: 400px;
+
+	div.connect
+	{
+		margin-top: 25px;
+		/*max-width: 400px;*/
+		> form
+		{
+			input
+			{
+				font-family: $fedora;
+			}
+
+			label
+			{
+				font-family: $fedora;
+				font-size: 24px;
+			}
+		}
+	}
+
+	div.logo
+	{
+		height: 30%;
+		margin-left: -15px;
+		margin-right: -15px;
+		padding-top: 5px;
+
+		img
+		{
+			max-height: 100%;
+			max-width: 100%;
+		}
+
+		> p
+		{
+			font-family: $fedora;
+			font-size: 20px;
+		}
+	}
+
+	div.points
+	{
+		display: table;
+		height: 100%;
+		width: 100%;
+
+		> div
+		{
+			display: table-cell;
+			font-family: $fedora;
+			vertical-align: middle;
+
+			> h1
+			{
+				font-size: 150px;
+				margin-bottom: 5px;
+			}
+
+			> h3
+			{
+				color: #CCC;
+				font-size: 40px;
+				margin-top: 0;
+			}
+		}
+	}
+
+	div.question
+	{
+		font-family: $fedora;
+
+		> div.question-options
+		{
+			font-size: 16px;
+			margin-bottom: 0;
+			padding: 10px;
+
+			input
+			{
+				margin-top: 5px !important;
+			}
+		}
+
+		h1
+		{
+			font-size: 60px;
+		}
+
+		> h3
+		{
+			font-size: 24px;
+			margin-bottom: 15px;
+			margin-top: 30px;
+			text-align: left;
+		}
+
+		label
+		{
+			font-size: 16px;
+		}
+	}
+
+	label.dimmed
+	{
+		opacity: 0.3;
+	}
+}
+
+div.body-presenter
+{
+	button
+	{
+		font-size: 100px !important;
+		padding: 50px;
+	}
+
+	> div.reset
+	{
+		bottom: 15px;
+		display: table-cell;
+		left: 15px;
+		position: absolute;
+		text-align: center;
+
+
+		> button
+		{
+			font-size: 10px !important;
+			margin-left: 15px;
+			margin-right: 15px;
+			padding: 10px;
+		}
+	}
+}
+
+div.button-bottom
+{
+	bottom: 15px;
+	left: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: absolute;
+	width: 100%;
+
+	button
+	{
+		font-family: $fedora;
+		width: 100%;
+	}
+}
+
+div.text-bottom
+{
+	bottom: 0;
+	left: 0;
+	padding-left: 15px;
+	padding-right: 15px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+}
+
+div.footer
+{
+	font-size: 10px;
+	margin-top: -20px;
+	padding-right: 5px;
+	text-align: right;
+}
+
+div.heart
+{
+	color: #CC0000;
+	font-size: 10px;
+	position: absolute;
+	right: 2px;
+	top: 2px;
+}
+
+div.log-off
+{
+	left: 2px;
+	position: absolute;
+	top: 2px;
+
+	> button
+	{
+		color: #666;
+	}
+}
+
+div.overlay-container
+{
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+input[type=radio]
+{
+	cursor: pointer;
+}
+
+div.radio
+{
+	padding-bottom: 5px;
+	padding-top: 5px;
+
+	span
+	{
+		color: #FFEE00;
+	}
+}
+
+span.letter
+{
+
+}
+
+#starField
+{
+	height: 100%;
+}
+
+
+
+.glyphicon-refresh-animate
+{
+	-moz-animation: spin 1s infinite linear;
+	-o-animation: spin 1s infinite linear;
+	-webkit-animation: spin 1s infinite linear;
+	animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin
+{
+	from
+	{
+		-moz-transform: scale(1) rotate(0);
+		-ms-transform: scale(1) rotate(0);
+		-o-transform: scale(1) rotate(0);
+		-webkit-transform: scale(1) rotate(0);
+		transform: scale(1) rotate(0);
+	}
+
+	to
+	{
+		-moz-transform: scale(1) rotate(360deg);
+		-ms-transform: scale(1) rotate(360deg);
+		-o-transform: scale(1) rotate(360deg);
+		-webkit-transform: scale(1) rotate(360deg);
+		transform: scale(1) rotate(360deg);
+	}
+}
+
+@-moz-keyframes spin
+{
+	from
+	{
+		-moz-transform: scale(1) rotate(0);
+		-ms-transform: scale(1) rotate(0);
+		-o-transform: scale(1) rotate(0);
+		-webkit-transform: scale(1) rotate(0);
+		transform: scale(1) rotate(0);
+	}
+
+	to
+	{
+		-moz-transform: scale(1) rotate(360deg);
+		-ms-transform: scale(1) rotate(360deg);
+		-o-transform: scale(1) rotate(360deg);
+		-webkit-transform: scale(1) rotate(360deg);
+		transform: scale(1) rotate(360deg);
+	}
+}
+
+@keyframes spin
+{
+	from
+	{
+		-moz-transform: scale(1) rotate(0);
+		-ms-transform: scale(1) rotate(0);
+		-o-transform: scale(1) rotate(0);
+		-webkit-transform: scale(1) rotate(0);
+		transform: scale(1) rotate(0);
+	}
+
+	to
+	{
+		-moz-transform: scale(1) rotate(360deg);
+		-ms-transform: scale(1) rotate(360deg);
+		-o-transform: scale(1) rotate(360deg);
+		-webkit-transform: scale(1) rotate(360deg);
+		transform: scale(1) rotate(360deg);
+	}
+}

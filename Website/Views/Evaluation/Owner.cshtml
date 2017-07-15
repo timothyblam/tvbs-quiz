@@ -1,0 +1,5 @@
+﻿@{
+	ViewBag.Title = "TVBS 2017";
+}
+
+<tvbs:evaluation-owner color="@this.ViewBag.Color" evaluation-id="@this.ViewBag.Id" host="@ConfigurationManager.AppSettings["Host"]" team="@this.ViewBag.Team"></tvbs:evaluation-owner>

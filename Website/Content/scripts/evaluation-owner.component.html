@@ -1,0 +1,79 @@
+﻿<div ng-switch="vm.getIsWebSocketOpen()" class="heart">
+	<span ng-switch-when="true" class="glyphicon glyphicon-heart"></span>
+	<span ng-switch-when="false" class="glyphicon glyphicon-heart-empty"></span>
+</div>
+
+<div class="body-container container-fluid body-owner" style="height: 100%;">
+	<div class="header">
+		<div class="logo">
+			<a ng-click="vm.restart()"><img src="/content/images/logo.png" /></a>
+		</div>
+
+		<div ng-hide="vm.getState() === 'question' || !vm.hasQuestion()" class="question">
+			<p>
+				<span class="letter {{ vm.color }}">{{ vm.getQuestionNumber() }})</span>
+				{{ vm.getQuestion().text }}
+			</p>
+			<ul class="list-unstyled">
+				<li ng-repeat="option in vm.getQuestion().options">
+					<span class="letter {{ vm.color }}">{{ option.letter }})</span>
+					{{ option.text }}
+				</li>
+			</ul>
+		</div>
+
+		<div class="team" ng-hide="vm.getState() === 'question'">
+			<h2 class="{{ vm.color }}">{{ vm.team }}</h2>
+		</div>
+	</div>
+
+	<div ng-switch="vm.getState()" class="body">
+		<div ng-switch-when="players" class="players">
+			<div ng-repeat="player in vm.getPlayers() | orderBy : 'name'" class="col-xs-2 player">
+				<div ng-show="player.isActive" class="player-container">
+					<div ng-show="player.isConnected" class="connection-indicator">
+						<span class="glyphicon glyphicon-flash"></span>
+					</div>
+					<h4 class="{{ vm.color }}">{{ player.name }}</h4>
+					<div class="answer">
+						<h1>{{ player.points | number }}</h1>
+						<h4 ng-switch="player.answer.isCorrect">
+							<span ng-switch-when="true" class="text-success">{{ player.answer.letter }} - Correct</span>
+							<span ng-switch-when="false" class="text-danger">{{ player.answer.letter }} - Incorrect</span>
+						</h4>
+					</div>
+
+					<!--
+					<div ng-show="vm.getIsAnsweringQuestion() && player.answer.letter !== ''" class="answer">
+						<h1 class="text-center"><span class="glyphicon glyphicon-ok"></span></h1>
+					</div>
+					-->
+				</div>
+			</div>
+		</div>
+
+		<div ng-switch-when="question" class="question">
+			<h1>
+				<span class="letter {{ vm.color }}">{{ vm.getQuestionNumber() }})</span>
+				{{ vm.getQuestion().text }}
+			</h1>
+			<ul>
+				<li ng-repeat="option in vm.getQuestion().options | orderBy: 'letter' : false : vm.acbdComparator">
+					<span class="letter {{ vm.color }}">{{ option.letter}})</span>
+					{{ option.text }}
+				</li>
+			</ul>
+
+			<div class="players-summary">
+				<div ng-repeat="player in vm.getPlayers() | orderBy : 'name'" class="player">
+					<div ng-show="player.isActive" class="player-container">
+						<h4 class="{{ vm.color }}">{{ player.name }}</h4>
+						<div ng-show="vm.hasPlayerAnswered(player)" class="answer">
+							<h2 class="text-center"><span class="glyphicon glyphicon-flag"></span></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

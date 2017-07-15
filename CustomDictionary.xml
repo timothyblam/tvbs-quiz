@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dictionary>
+	<Words>
+		<Compound>
+			<Term CompoundAlternate="LookUp">lookup</Term>
+		</Compound>
+		<Recognized>
+			<Word>Ai</Word>
+			<Word>Api</Word>
+			<Word>Mvc</Word>
+			<Word>Tvbs</Word>
+			<Word>Uid</Word>
+		</Recognized>
+	</Words>
+</Dictionary>

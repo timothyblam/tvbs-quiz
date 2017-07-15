@@ -1,0 +1,6 @@
+﻿<div ng-show="vm.hasError()" class="bs-callout bs-callout-danger" style="background-color: white;">
+	<h4>HTTP {{ vm.response.status }}: {{ vm.response.statusText }}</h4>
+	<p>{{ vm.response.data.message }}</p>
+	<p>HTTP {{ vm.response.config.method }}: <a ng-href="{{ vm.response.config.url }}" mc-target="_blank">{{ vm.response.config.url }}</a></p>
+	<p ng-show="vm.response.config.data !== null">{{ vm.response.config.data }}</p>
+</div>
